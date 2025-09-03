@@ -4,6 +4,7 @@ import com.hellowork.jobsoffer.model.JobOffer;
 import com.hellowork.jobsoffer.poleemploi.PoleEmploiClient;
 import com.hellowork.jobsoffer.repository.JobOfferRepository;
 import com.hellowork.jobsoffer.service.JobOfferService;
+import com.hellowork.jobsoffer.service.JobOfferServiceImpl;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.mockito.Mockito;
@@ -21,7 +22,7 @@ public class JobOfferServiceTest {
     void setup() {
         jobOfferRepository = Mockito.mock(JobOfferRepository.class);
         poleEmploiClient = Mockito.mock(PoleEmploiClient.class);
-        jobOfferService = new JobOfferService(poleEmploiClient, jobOfferRepository); // constructeur avec dépendances
+        jobOfferService = new JobOfferServiceImpl(poleEmploiClient, jobOfferRepository); // constructeur avec dépendances
 
         // Offre test
         JobOffer offer1 = JobOffer.builder()
