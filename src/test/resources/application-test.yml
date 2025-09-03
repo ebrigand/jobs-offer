@@ -1,0 +1,5 @@
+spring:
+  data:
+    mongodb:
+      database: jobsdb_test
+      port: 0

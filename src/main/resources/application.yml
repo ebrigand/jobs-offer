@@ -1,0 +1,17 @@
+logging:
+  level:
+    com.hellowork.jobsoffer: DEBUG
+
+spring:
+  data:
+    mongodb:
+      uri: ${MONGODB_URI:mongodb://localhost:27017/jobsdb}
+
+pole:
+  emploi:
+    api-base: ${POLE_EMPLOI_API_BASE:https://api.francetravail.io/partenaire}
+    token-base: ${POLE_EMPLOI_AUTH_BASE:https://entreprise.pole-emploi.fr}
+    client-id: ${POLE_EMPLOI_CLIENT_ID:PAR_jobsoffer_8abba8ff59fca952c74040595c38cf73c477485b9b5abd9336f5abc4d5d6118b}
+    client-secret: ${POLE_EMPLOI_CLIENT_SECRET:7af9bcec67e911a9445189c3036763401f32a543d47372dfb889bdc914d8b153}
+    scope: ${POLE_EMPLOI_SCOPE:api_offresdemploiv2 o2dsoffre}
+    page-size: ${POLE_EMPLOI_PAGE_SIZE:10}
