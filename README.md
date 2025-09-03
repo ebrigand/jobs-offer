@@ -41,7 +41,6 @@ client-secret: ${POLE_EMPLOI_CLIENT_SECRET:xxxxxx}
    ```bash
    git clone https://github.com/ebrigand/jobs-offer.git
    cd jobs-offer
-Assurez-vous d'avoir Gradle installé sur votre machine. Si ce n'est pas le cas, vous pouvez l'installer depuis https://gradle.org/install/.
 
 Exécutez le projet avec Gradle :
 
