@@ -40,15 +40,15 @@ class JobOfferServiceTest {
 
         // Création des offres communes à tous les tests
         offer1 = JobOffer.builder()
-                .externalId("123")
+                .externalId("1")
                 .company("Capgemini")
                 .description("Développeur Java")
                 .city("Bordeaux")
                 .build();
 
         offer2 = JobOffer.builder()
-                .externalId("1234")
-                .company("Helloworks")
+                .externalId("2")
+                .company("Hellowork")
                 .description("Développeur C#")
                 .city("Rennes")
                 .build();

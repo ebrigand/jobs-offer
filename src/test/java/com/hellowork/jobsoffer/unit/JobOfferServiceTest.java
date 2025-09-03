@@ -27,13 +27,13 @@ public class JobOfferServiceTest {
         // Offre test
         JobOffer offer1 = JobOffer.builder()
                 .externalId("1")
-                .title("Développeur Java")
+                .description("Développeur Java")
                 .city("Bordeaux")
                 .build();
 
         JobOffer offer2 = JobOffer.builder()
                 .externalId("2")
-                .title("Développeur React")
+                .description("Développeur React")
                 .city("Rennes")
                 .build();
 
