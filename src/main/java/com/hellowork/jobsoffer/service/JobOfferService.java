@@ -1,5 +1,6 @@
 package com.hellowork.jobsoffer.service;
 
+import com.hellowork.jobsoffer.exception.TooManyCitiesException;
 import com.hellowork.jobsoffer.model.JobOffer;
 import com.hellowork.jobsoffer.poleemploi.PoleEmploiClient;
 import com.hellowork.jobsoffer.repository.JobOfferRepository;
@@ -11,7 +12,6 @@ import reactor.core.publisher.Mono;
 
 import java.time.Duration;
 import java.time.Instant;
-import java.util.List;
 
 @Slf4j
 @Service
@@ -58,6 +58,9 @@ public class JobOfferService {
     }
 
     public Flux<JobOffer> fetchAndStoreAllPagesForCitiesAndDepartment(String cities, String departments) {
+        long count = cities.chars().filter(c -> c == ',').count();
+        if(count > 4) throw new TooManyCitiesException("Le maximum de villes est de 5, cities: " + cities);
+
         log.info("🏙️ Début import offres pour la ville: {}", cities);
 
         return Flux.range(0, Integer.MAX_VALUE) // simulateur de pagination infini

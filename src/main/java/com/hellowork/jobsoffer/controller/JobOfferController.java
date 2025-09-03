@@ -1,14 +1,13 @@
 package com.hellowork.jobsoffer.controller;
 
-import com.hellowork.jobsoffer.model.JobOffer;
 import com.hellowork.jobsoffer.report.ReportService;
 import com.hellowork.jobsoffer.service.JobOfferService;
 import lombok.RequiredArgsConstructor;
-import org.springframework.web.bind.annotation.*;
-import reactor.core.publisher.Flux;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RestController;
 import reactor.core.publisher.Mono;
-
-import java.util.List;
 
 @RestController
 @RequestMapping("/jobs-offer")
