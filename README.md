@@ -20,14 +20,13 @@ L'objectif principal de ce projet est de démontrer les compétences en dévelop
 
 ## ✅ Pré requis
 
-Java 21
-MongoDB installée sur localhost avec le port 27017 d'ouvert et une base de créée: "jobsdb" avec la collection "offers"
+- Java 21
+- MongoDB installée sur localhost avec le port 27017 d'ouvert et une base de créée: "jobsdb" avec la collection "offers"
 
-Récupérer un client-id et client-secret en se connectant sur https://francetravail.io/ avec la configuration suivante:
-- Une application avec les paramètres suivants nom: jobsoffer url: http://localhost:8080/jobs-offer
-- Et ajouter l'API Offres d'emploi v2
-
-Puis les insérer dans application.yml:
+- Récupérer un client-id et client-secret en se connectant sur https://francetravail.io/ avec la configuration suivante:
+  - Une application avec les paramètres suivants nom: jobsoffer url: http://localhost:8080/jobs-offer
+  - Et ajouter l'API Offres d'emploi v2
+  - Puis les insérer dans application.yml:
    
 ```bash
 client-id: ${POLE_EMPLOI_CLIENT_ID:xxxxxx}
